@@ -1,8 +1,13 @@
 node('master') {
  
-    stage('JobDSL') {
+  try {
+
+    stage('Checkout') {
       
-	  jobDsl targets: [
+    }
+
+    stage('JobDSL') {
+      jobDsl targets: [
           'demo.groovy'
           ].join('\n'),
 		  
@@ -10,4 +15,9 @@ node('master') {
         removedViewAction: 'DELETE',
         lookupStrategy: 'SEED_JOB'
     }
+
+  } catch (ex) {
+    emailext to: 'princeex87@gmail.com.com', body: "<p>Build: ${env.BUILD_URL}<p>", subject: 'seed job failed'
+    throw ex
+  }
 }

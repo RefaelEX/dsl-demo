@@ -1,4 +1,4 @@
-pipelineJob('create-branch') {
+pipelineJob('Demo') {
 
   displayName('Demo')
 
@@ -6,7 +6,7 @@ pipelineJob('create-branch') {
        cpsScm {
             scm {
                 git('https://github.com/RefaelEX/dsl-demo.git')
-                scriptPath('files/demo.Jenkinsfile')
+                scriptPath('demo.Jenkinsfile')
             }
         }
   }

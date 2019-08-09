@@ -1,9 +1,8 @@
 node('master') {
- 
   try {
 
     stage('Checkout') {
-      
+      checkout scm
     }
 
     stage('JobDSL') {
@@ -15,8 +14,9 @@ node('master') {
         removedViewAction: 'DELETE',
         lookupStrategy: 'SEED_JOB'
     }
-
-  } catch (ex) {
+  } 
+  
+  catch (ex) {
     emailext to: 'princeex87@gmail.com.com', body: "<p>Build: ${env.BUILD_URL}<p>", subject: 'seed job failed'
     throw ex
   }

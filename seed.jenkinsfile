@@ -11,8 +11,7 @@ node('master') {
           ].join('\n'),
 		  
         removedJobAction: 'DISABLE',
-        removedViewAction: 'DELETE',
-        lookupStrategy: 'SEED_JOB'
+        removedViewAction: 'DELETE'
     }
   } 
   

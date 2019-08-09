@@ -3,9 +3,12 @@ pipelineJob('create-branch') {
   displayName('Demo')
 
   definition {
-    cpsScm {
-      scriptPath('demo.Jenkinsfile')
-    }
+       cpsScm {
+            scm {
+                git('https://github.com/RefaelEX/dsl-demo.git')
+                scriptPath('files/demo.Jenkinsfile')
+            }
+        }
   }
 
   parameters {

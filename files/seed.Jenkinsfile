@@ -1,7 +1,5 @@
 node {
-  try {
-
-    stage('Checkout') {
+	stage('Checkout') {
       checkout scm
     }
 
@@ -12,11 +10,5 @@ node {
 		  
         removedJobAction: 'DISABLE',
         removedViewAction: 'DELETE'
-    }
-  } 
-  
-  catch (ex) {
-    emailext to: 'princeex87@gmail.com.com', body: "<p>Build: ${env.BUILD_URL}<p>", subject: 'seed job failed'
-    throw ex
-  }
+    }  
 }

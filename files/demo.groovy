@@ -3,7 +3,7 @@ def jobName = 'demo';
 
 folder(folderName)
 
-pipelineJob('${folderName}/${jobName}') {
+pipelineJob("${folderName}/${jobName}") {
 		
 		definition {
 			cps {

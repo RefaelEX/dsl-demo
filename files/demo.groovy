@@ -1,3 +1,5 @@
+folder('demo folder')
+
 pipelineJob('example') {
     
 	displayName('Demo')

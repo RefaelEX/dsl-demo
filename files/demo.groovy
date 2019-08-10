@@ -1,8 +1,9 @@
-pipelineJob('example') {
-		
-		folder('demo folder'){
-			displayName('Demo')
-		}
+def folderName = example;
+def jobName = demo;
+
+folder(folderName)
+
+pipelineJob('${folderName}/${jobName}') {
 		
 		definition {
 			cps {

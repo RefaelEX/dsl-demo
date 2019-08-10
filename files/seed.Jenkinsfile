@@ -1,11 +1,12 @@
 node {
+	
 	stage('Checkout') {
       checkout scm
     }
 
     stage('JobDSL') {
       jobDsl targets: [
-	  'Jobs/*.groovy'
+	  'files/Jobs/*.groovy'
 	  ].join('\n'),
 		  
         removedJobAction: 'DISABLE',

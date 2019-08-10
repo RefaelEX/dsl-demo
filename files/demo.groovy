@@ -1,8 +1,8 @@
-folder('demo folder')
-
 pipelineJob('example') {
 		
-		displayName('Demo')
+		folder('demo folder'){
+			displayName('Demo')
+		}
 		
 		definition {
 			cps {

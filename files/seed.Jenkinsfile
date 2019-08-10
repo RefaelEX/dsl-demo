@@ -5,7 +5,7 @@ node {
 
     stage('JobDSL') {
       jobDsl targets: [
-          'files/demo.groovy'
+          '../Jenkinsfile/demo.groovy'
           ].join('\n'),
 		  
         removedJobAction: 'DISABLE',

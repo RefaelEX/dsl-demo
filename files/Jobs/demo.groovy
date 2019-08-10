@@ -7,7 +7,7 @@ pipelineJob("${folderName}/${jobName}") {
 		
 		definition {
 			cps {
-				script(readFileFromWorkspace('../Jenkinsfile/demo.Jenkinsfile'))
+				script(readFileFromWorkspace('Jenkinsfile/demo.Jenkinsfile'))
 				sandbox()
 			}
 		}

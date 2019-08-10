@@ -1,5 +1,5 @@
-def folderName = example;
-def jobName = demo;
+def folderName = 'example';
+def jobName = 'demo';
 
 folder(folderName)
 

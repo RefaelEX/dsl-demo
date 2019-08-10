@@ -5,8 +5,8 @@ node {
 
     stage('JobDSL') {
       jobDsl targets: [
-          'Jobs/demo.groovy'
-          ].join('\n'),
+	  'Jobs/*.groovy'
+	  ].join('\n'),
 		  
         removedJobAction: 'DISABLE',
         removedViewAction: 'DELETE'
